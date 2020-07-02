@@ -17,6 +17,7 @@ RUN cargo install tectonic
 
 RUN echo -e "<fontconfig>\n\t<dir>/data/fonts</dir>\n\t<dir>~/.fonts</dir>\n</fontconfig>" >  /etc/fonts/local.conf
 RUN mkdir /data
+RUN mkdir -p /root/.cache/Tectonic
 RUN ln -s /data/.cache /root/.cache/Tectonic
 
 WORKDIR /data
