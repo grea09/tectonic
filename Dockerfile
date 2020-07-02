@@ -20,5 +20,7 @@ RUN mkdir /data
 RUN mkdir -p /root/.cache/Tectonic
 RUN ln -s /data/.cache /root/.cache/Tectonic
 
+ENV PATH="/root/.cargo/bin/tectonic:${PATH}"
+
 WORKDIR /data
 ENTRYPOINT ["tectonic"]
