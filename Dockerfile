@@ -19,8 +19,8 @@ RUN echo -e "<fontconfig>\n\t<dir>/data/fonts</dir>\n\t<dir>~/.fonts</dir>\n</fo
 RUN mkdir /data
 RUN mkdir -p /root/.cache/Tectonic
 RUN ln -s /data/.cache /root/.cache/Tectonic
+RUN cp /root/.cargo/bin/tectonic /usr/local/bin
 
-ENV PATH="/root/.cargo/bin/tectonic:${PATH}"
 
 WORKDIR /data
 ENTRYPOINT ["tectonic"]
